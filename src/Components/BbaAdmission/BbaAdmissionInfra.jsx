@@ -20,7 +20,7 @@ const data = [
     title: "Campus Facilities and Infrastructure",
     description:
       "Indira University's modern campus features technology-enabled smart classrooms, comprehensive library and digital resources, conference halls hosting guest lectures and industry seminars, career development and placement cell, sports facilities supporting excellence in BBA International Business education with global immersion programme facilities.",
-    images: [img1,img2,img3,img4,img5],
+    images: [img11,img12,img13,img14,img15],
     contentSide: "left", // First: content left, image right
   },
   {
@@ -36,7 +36,8 @@ const data = [
     title: "Events and Annual Celebrations",
     description:
       "Indira University hosts vibrant annual events featuring industry leaders and corporate networking; multi-day cultural festival with celebrity appearances and inter-college participation; sports week promoting fitness and team spirit; fresher's induction farewell ceremony for graduating batches; regular industry interaction through guest lectures from MNCs; and formal convocation ceremony for degree conferment, creating memorable experiences supporting holistic development in business administration education with international exposure.",
-    images: [img11,img12,img13,img14,img15],
+    
+    images: [img1,img2,img3,img4,img5],
     contentSide: "left", // Third: content left, image right
   },
 ];
