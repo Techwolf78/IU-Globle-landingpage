@@ -26,7 +26,7 @@ function MarketingManagementJoin() {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden mt-6 md:mt-10">
       {/* Background image */}
       <div
         className="bg-cover bg-center absolute inset-0"

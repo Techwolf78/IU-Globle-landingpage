@@ -97,10 +97,9 @@ function CompHero() {
           {/* Description with staggered animation */}
           <div className="space-y-2">
             <p className="text-lg sm:text-xl md:text-md leading-relaxed transform transition-all duration-700 delay-300 text-normal">
-              Accelerate Your Career with India's Top BBA International Business
-              Degree Featuring Korean Language Training, International
-              Internship Experience, and Global Business Exposure at Korea
-              University
+           <span className="font-bold text-amber-300 text-2xl">Study at Korea University - Ranked #12 in QS Asia Rankings</span> <br />
+ 
+Experience international business education with our exclusive Global Immersion Programme
             </p>
           </div>
 

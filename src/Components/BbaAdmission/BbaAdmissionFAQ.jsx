@@ -116,7 +116,7 @@ function BbaAdmissionFAQ() {
         </div>
 
         {/* 3 Column Grid for FAQ Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-43gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {FAQ_DATA.map((item, index) => (
             <AccordionItem
               key={index}
@@ -126,6 +126,7 @@ function BbaAdmissionFAQ() {
             />
           ))}
         </div>
+
       </div>
     </section>
   );

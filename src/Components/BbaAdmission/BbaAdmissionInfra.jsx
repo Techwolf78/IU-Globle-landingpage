@@ -1,15 +1,26 @@
 import { useEffect, useState, useRef } from "react";
-import img1 from "../../assets/club.jpg";
-import img2 from "../../assets/Event.jpg";
-import img3 from "../../assets/Facilities.jpg";
-
+import img1 from "../../assets/event2.jpg";
+import img2 from "../../assets/event3.jpg";
+import img3 from "../../assets/event5.jpg";
+import img4 from "../../assets/event4.jpg";
+import img5 from "../../assets/event1.jpg";
+import img6 from "../../assets/facilities2.jpg";
+import img7 from "../../assets/facilities3.jpg";
+import img8 from "../../assets/facilities5.jpg";
+import img9 from "../../assets/facilities4.jpg";
+import img10 from "../../assets/facilities1.jpg";
+import img11 from "../../assets/club2.jpg";
+import img12 from "../../assets/club3.jpg";
+import img13 from "../../assets/club5.jpg";
+import img14 from "../../assets/club4.jpg";
+import img15 from "../../assets/club1.jpg";
 const data = [
   {
     id: 1,
     title: "Campus Facilities and Infrastructure",
     description:
       "Indira University's modern campus features technology-enabled smart classrooms, comprehensive library and digital resources, conference halls hosting guest lectures and industry seminars, career development and placement cell, sports facilities supporting excellence in BBA International Business education with global immersion programme facilities.",
-    image: img2,
+    images: [img1,img2,img3,img4,img5],
     contentSide: "left", // First: content left, image right
   },
   {
@@ -17,18 +28,20 @@ const data = [
     title: "Student Activities and Clubs",
     description:
       "Experience dynamic campus life through our Entrepreneurship and Innovation Cell connecting aspiring entrepreneurs with mentors, Marketing Club, Finance Club, Cultural Committee hosting annual festivals and talent shows, Technical and IT Club offering coding workshops; providing comprehensive co-curricular development alongside BBA International Business education with global immersion focus.",
-    image: img3,
-    contentSide: "right", // Second: content right, image left
+    images: [img6,img7,img8,img9,img10],
+    contentSide: "left", // Second: content right, imge left
   },
   {
     id: 3,
     title: "Events and Annual Celebrations",
     description:
       "Indira University hosts vibrant annual events featuring industry leaders and corporate networking; multi-day cultural festival with celebrity appearances and inter-college participation; sports week promoting fitness and team spirit; fresher's induction farewell ceremony for graduating batches; regular industry interaction through guest lectures from MNCs; and formal convocation ceremony for degree conferment, creating memorable experiences supporting holistic development in business administration education with international exposure.",
-    image: img1,
+    images: [img11,img12,img13,img14,img15],
     contentSide: "left", // Third: content left, image right
   },
 ];
+
+
 export default function CampusFacilities() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef(null);
@@ -222,115 +235,198 @@ export default function CampusFacilities() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100vh] bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58]"
+      className="relative min-h-[100vh] bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58] py-4 md:py-10"
       style={{ height: `${data.length * 100}vh` }}
     >
       {/* Sticky container that stays in view */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
         {/* Content Container - Inside sticky div */}
-        <div className="relative container mx-auto px-4 lg:px-8 z-20 w-full">
-          <div className="max-w-7xl mx-auto">
-            {data.map((item, index) => (
-              <div
-                key={item.id}
-                className={`transition-all duration-700 ease-out ${
-                  activeIndex === index
-                    ? "opacity-100"
-                    : "opacity-0 absolute inset-x-0 pointer-events-none"
-                }`}
-              >
-                <div className="flex flex-col lg:flex-row items-center justify-between min-h-[70vh]">
-                  {/* Content Section */}
-                  <div
-                    className={`w-full lg:w-5/12 mb-10 lg:mb-0 ${
-                      item.contentSide === "left" ? "lg:order-1" : "lg:order-2"
-                    }`}
-                  >
-                    <div className="max-w-xl">
-                      <span className="inline-block px-4 py-1 bg-gradient-to-r from-[#CAA050] to-[#CAA050] text-black text-sm font-semibold rounded-full mb-4">
-                        Campus Highlights
-                      </span>
+        <div className="relative container mx-auto z-20 w-full max-w-7xl">
+          {data.map((item, index) => (
+            <div
+              key={item.id}
+              className={`transition-all duration-700 ease-out ${
+                activeIndex === index
+                  ? "opacity-100 visible"
+                  : "opacity-0 invisible absolute inset-x-0 pointer-events-none"
+              }`}
+            >
+              <div className="flex flex-col lg:flex-row items-center justify-between min-h-[70vh] gap-6 md:gap-8 lg:gap-12">
+                {/* Content Section */}
+                <div
+                  className={`w-full lg:w-5/12 order-1 ${
+                    item.contentSide === "right" ? "lg:order-2" : "lg:order-1"
+                  }`}
+                >
+                  <div className="max-w-xl mx-auto lg:mx-0">
+                    {/* Badge */}
+                    <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-[#FCC409] to-[#FFD700] text-black text-sm font-semibold rounded-full mb-4 md:mb-6 shadow-lg">
+                      Campus Highlights
+                    </span>
 
-                      <h2 className="text-3xl md:text-5xl font-bold  text-white leading-tight">
-                        {item.title}
-                      </h2>
+                    {/* Title */}
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
+                      {item.title}
+                    </h2>
 
-                
-                      <div className="max-w-2xl">
-                        <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    {/* Divider */}
+                    <div className="w-20 sm:w-24 md:w-28 h-1 bg-gradient-to-r from-[#FCC409] to-[#FFD700] mb-6 md:mb-8 rounded-full lg:mr-auto"></div>
 
-                  {/* Image Section */}
-                  <div
-                    className={`w-full lg:w-6/12 ${
-                      item.contentSide === "left" ? "lg:order-2" : "lg:order-1"
-                    }`}
-                  >
-                    <div className="relative">
-                      <div className="relative overflow-hidden transform transition-transform duration-700 ease-out hover:scale-[1.02]">
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-[400px] lg:h-[400px] object-contain"
-                        />
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                      </div>
+                    {/* Content Card */}
+                    <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl lg:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 border border-white/10 shadow-xl">
+                      <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed mb-4 sm:mb-5 md:mb-6">
+                        {item.description}
+                      </p>
 
-                      {/* Decorative element */}
-                      <div
-                        className={`absolute -z-10 w-64 h-64 rounded-full bg-gradient-to-r from-[#FCC409]/20 to-[#FFD700]/10 blur-3xl ${
-                          item.contentSide === "left"
-                            ? "-left-10 -top-10"
-                            : "-right-10 -top-10"
-                        }`}
-                      />
+                      {/* Button */}
+                      <button
+                        onClick={() =>
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
+                        className="w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 md:px-6 md:py-3 bg-gradient-to-r from-[#FCC409] to-[#FFD700] text-black font-semibold rounded-lg hover:scale-105 active:scale-95 transition-transform duration-300 shadow-lg text-sm sm:text-base md:text-lg cursor-pointer"
+                      >
+                        Learn More
+                      </button>
                     </div>
                   </div>
                 </div>
+
+                {/* Image Grid Section */}
+                <div
+                  className={`w-full lg:w-7/12 order-2 ${
+                    item.contentSide === "right" ? "lg:order-1" : "lg:order-2"
+                  }`}
+                >
+                  <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] w-full">
+                    {/* Top Row - 2 Images */}
+                    <div className="flex gap-2 sm:gap-3 md:gap-4 mb-2 sm:mb-3 md:mb-4">
+                      {/* Image 1 */}
+                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                        <img
+                          src={item.images[0]}
+                          alt={`${item.title} 1`}
+                          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+
+                      {/* Image 2 */}
+                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                        <img
+                          src={item.images[1]}
+                          alt={`${item.title} 2`}
+                          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </div>
+
+                    {/* Middle Row - 1 Big Image */}
+                    <div className="relative h-40 sm:h-44 md:h-60 mb-2 sm:mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-xl lg:rounded-2xl shadow-lg sm:shadow-xl group">
+                      <img
+                        src={item.images[2]}
+                        alt={`${item.title} 3`}
+                        className="w-full h-full object-container transform transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    </div>
+
+                    {/* Bottom Row - 2 Images */}
+                    <div className="flex gap-2 sm:gap-3 md:gap-4">
+                      {/* Image 4 */}
+                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                        <img
+                          src={item.images[3]}
+                          alt={`${item.title} 4`}
+                          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+
+                      {/* Image 5 */}
+                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                        <img
+                          src={item.images[4]}
+                          alt={`${item.title} 5`}
+                          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </div>
+
+                    {/* Decorative elements */}
+                    <div className="hidden md:block absolute -z-10 w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full bg-gradient-to-r from-[#FCC409]/10 to-[#FFD700]/5 blur-2xl lg:blur-3xl -left-4 md:-left-8 lg:-left-12 -top-4 md:-top-8 lg:-top-12" />
+                    <div className="hidden md:block absolute -z-10 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full bg-gradient-to-r from-[#990000]/20 to-[#011E5A]/20 blur-xl lg:blur-2xl right-2 md:right-4 lg:right-8 bottom-2 md:bottom-4 lg:bottom-8" />
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Dots - Desktop Only (Right Side) */}
+        <div className="hidden lg:flex absolute right-4 xl:right-8 2xl:right-12 top-1/2 transform -translate-y-1/2 z-30 flex-col gap-3 xl:gap-4">
+          {data.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handleDotClick(index)}
+              className={`w-3 h-3 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5 rounded-full transition-all duration-300 flex items-center justify-center ${
+                activeIndex === index
+                  ? "bg-gradient-to-r from-[#FCC409] to-[#FFD700] scale-125 ring-3 xl:ring-4 ring-[#FCC409]/30"
+                  : "bg-white/30 hover:bg-white/50 ring-1 xl:ring-2 ring-white/20"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              {activeIndex === index && (
+                <div className="w-1.5 h-1.5 xl:w-2 xl:h-2 2xl:w-2.5 2xl:h-2.5 bg-black rounded-full"></div>
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile & Tablet Navigation Dots */}
+        <div className="lg:hidden absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex gap-2 sm:gap-3">
+          {data.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handleDotClick(index)}
+              className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${
+                activeIndex === index
+                  ? "bg-gradient-to-r from-[#FCC409] to-[#FFD700] scale-125 ring-2 ring-[#FCC409]/50"
+                  : "bg-white/40"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Section Counter - Desktop Only */}
+        <div className="hidden lg:block absolute top-4 xl:top-8 2xl:top-12 left-4 xl:left-8 2xl:left-12 z-30">
+          <div className="text-white/80">
+            <span className="text-xl xl:text-2xl 2xl:text-3xl font-bold text-[#FCC409]">
+              {activeIndex + 1}
+            </span>
+            <span className="text-white/60 mx-1 xl:mx-2 2xl:mx-3">/</span>
+            <span className="text-sm xl:text-base 2xl:text-lg">{data.length}</span>
+          </div>
+          <div className="text-white/60 text-xs xl:text-sm 2xl:text-base mt-0.5">
+            Campus Features
           </div>
         </div>
 
-        {/* Navigation Dots */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-30 hidden md:flex flex-col gap-4">
-          {data.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeIndex === index
-                  ? "bg-gradient-to-r from-[#FCC409] to-[#FFD700] scale-125"
-                  : "bg-white/50 hover:bg-white/80"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Mobile Navigation Dots */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-3 md:hidden">
-          {data.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                activeIndex === index
-                  ? "bg-gradient-to-r from-[#FCC409] to-[#FFD700] scale-125"
-                  : "bg-white/50"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        {/* Mobile & Tablet Section Counter */}
+        <div className="lg:hidden absolute top-5 right-5 sm:top-6 sm:right-6 z-30">
+          <div className="text-white/80 flex items-center">
+            <span className="text-lg sm:text-xl font-bold text-[#FCC409]">
+              {activeIndex + 1}
+            </span>
+            <span className="text-white/60 mx-1 sm:mx-2">/</span>
+            <span className="text-sm sm:text-base">{data.length}</span>
+          </div>
         </div>
       </div>
 
-     
+
     </section>
   );
 }

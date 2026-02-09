@@ -22,11 +22,9 @@ function BbaAdmission() {
       <BbaAdmissionHero />
       <BbaAdmissionPointers />
       <Overview />
-            <GlobalImmersionComponents />
-
+      <GlobalImmersionComponents />
       <BbaAdmissionTopPlacement />
       <Recruiter />
-      
       <About />
       <Whychoose />
       <BbaAdmissionOverview />
