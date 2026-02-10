@@ -97,7 +97,7 @@ function CompHero() {
           {/* Description with staggered animation */}
           <div className="space-y-2">
             <p className="text-lg sm:text-xl md:text-md leading-relaxed transform transition-all duration-700 delay-300 text-normal">
-           <span className="font-bold text-amber-300 text-2xl">Study at Korea University - Ranked #12 in QS Asia Rankings</span> <br />
+           <span className="font-bold text-amber-300 text-2xl">Experiential Learning at Korea University  - Ranked #12 in QS Asia Rankings</span> <br />
  
 Experience international business education with our exclusive Global Immersion Programme
             </p>
@@ -113,15 +113,7 @@ Experience international business education with our exclusive Global Immersion 
             </div>
           </div>
 
-          {/* Animated scroll indicator for mobile */}
-          <div className="md:hidden mt-8 animate-bounce-slow">
-            <div className="flex flex-col items-center">
-              <span className="text-sm mb-2">Scroll for more</span>
-              <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-white rounded-full mt-2 animate-scroll"></div>
-              </div>
-            </div>
-          </div>
+
         </div>
 
         {/* RIGHT FORM with slide-in animation */}

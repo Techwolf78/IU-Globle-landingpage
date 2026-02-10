@@ -19,9 +19,9 @@ const data = [
     id: 1,
     title: "Campus Facilities and Infrastructure",
     description:
-      "Indira University's modern campus features technology-enabled smart classrooms, comprehensive library and digital resources, conference halls hosting guest lectures and industry seminars, career development and placement cell, sports facilities supporting excellence in BBA International Business education with global immersion programme facilities.",
+      "Indira University's modern campus features technology-enabled smart classrooms, a comprehensive library and digital resources, conference halls hosting guest lectures and industry seminars, a career development and placement cell, and sports facilities supporting all-round development in BBA International Business education with a global immersion programme, ensuring students secure their future with high placement. ",
     images: [img11,img12,img13,img14,img15],
-    contentSide: "left", // First: content left, image right
+    contentSide: "left", 
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const data = [
     description:
       "Experience dynamic campus life through our Entrepreneurship and Innovation Cell connecting aspiring entrepreneurs with mentors, Marketing Club, Finance Club, Cultural Committee hosting annual festivals and talent shows, Technical and IT Club offering coding workshops; providing comprehensive co-curricular development alongside BBA International Business education with global immersion focus.",
     images: [img6,img7,img8,img9,img10],
-    contentSide: "left", // Second: content right, imge left
+    contentSide: "left", 
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const data = [
       "Indira University hosts vibrant annual events featuring industry leaders and corporate networking; multi-day cultural festival with celebrity appearances and inter-college participation; sports week promoting fitness and team spirit; fresher's induction farewell ceremony for graduating batches; regular industry interaction through guest lectures from MNCs; and formal convocation ceremony for degree conferment, creating memorable experiences supporting holistic development in business administration education with international exposure.",
     
     images: [img1,img2,img3,img4,img5],
-    contentSide: "left", // Third: content left, image right
+    contentSide: "left", 
   },
 ];
 
@@ -408,15 +408,7 @@ export default function CampusFacilities() {
         </div>
 
         {/* Mobile & Tablet Section Counter */}
-        <div className="lg:hidden absolute top-5 right-5 sm:top-6 sm:right-6 z-30">
-          <div className="text-white/80 flex items-center">
-            <span className="text-lg sm:text-xl font-bold text-[#FCC409]">
-              {activeIndex + 1}
-            </span>
-            <span className="text-white/60 mx-1 sm:mx-2">/</span>
-            <span className="text-sm sm:text-base">{data.length}</span>
-          </div>
-        </div>
+       
       </div>
 
 

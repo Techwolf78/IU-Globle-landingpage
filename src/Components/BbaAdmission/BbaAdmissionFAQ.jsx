@@ -111,8 +111,7 @@ function BbaAdmissionFAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-white max-w-3xl mx-auto">
-            Get answers to the most common questions about BBA admissions
-          </p>
+Get answers to the most common questions about BBA course of Indira University, Maharashtra.           </p>
         </div>
 
         {/* 3 Column Grid for FAQ Cards */}
