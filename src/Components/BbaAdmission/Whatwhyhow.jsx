@@ -56,13 +56,13 @@ const GlobalImmersionProgram = () => {
           </div>
 
           {/* WHY Card */}
-          <div className="bg-gradient-to-br from-[#d1fffd] to-white border-l-8 border-[#03807c] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div className="bg-gradient-to-br from-[#a6bef5] to-white border-l-8 border-[#1657f2] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
             <div className="mb-6">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
                 {/* Airplane Icon - Simple */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#03807c]"
+                  className="h-8 w-8 text-[#092fce]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -78,7 +78,7 @@ const GlobalImmersionProgram = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why are Global Immersion Programmes important?
               </h2>
-              <div className="w-20 h-1 bg-[#03807c] mb-6"></div>
+              <div className="w-20 h-1 bg-[#092fce] mb-6"></div>
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">
               <span className="">
@@ -93,13 +93,13 @@ const GlobalImmersionProgram = () => {
           </div>
 
           {/* HOW Card */}
-          <div className="bg-gradient-to-br from-[#d8e0fc] to-white border-l-8 border-[#092fce] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div className="bg-gradient-to-br from-[#fcd3da] to-white border-l-8 border-[#990000] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
             <div className="mb-6">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
                 {/* Book Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#092fce"
+                  className="h-8 w-8 text-[#990000]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -115,7 +115,7 @@ const GlobalImmersionProgram = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 How our Global Immersion Programmes help you?
               </h2>
-              <div className="w-20 h-1 bg-[#092fce] mb-6"></div>
+              <div className="w-20 h-1 bg-[#990000] mb-6"></div>
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">
               <span className="">
