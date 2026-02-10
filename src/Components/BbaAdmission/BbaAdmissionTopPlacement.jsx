@@ -13,7 +13,7 @@ import img10 from "../../assets/New_Students/10.png";
 const students = [
   {
     name: "Mr. Aman Sawarkar",
-    company: "Accenture", // placeholder
+    company: "Accenture",
     feedback:
       "Proud placement achieved through focused training and mentorship.",
     image: img1,
@@ -65,7 +65,6 @@ const students = [
   },
   {
     name: "Ms. Samiksha P.",
-    // Pimpalshende
     company: "Ocman Realty",
     feedback: "Excellent mentorship and placement support throughout.",
     image: img9,
@@ -81,8 +80,8 @@ const students = [
 const TopPlacements = () => {
   const sliderRef = useRef(null);
   const animationRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
   const positionRef = useRef(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -109,40 +108,33 @@ const TopPlacements = () => {
 
   return (
     <div className="px-4 md:px-16 py-6 bg-gradient-to-r from-[#7A0C1E] via-[#5C1233] to-[#2A0F3F] overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
-        {/* LEFT CONTENT */}
-        <div className="md:col-span-2 px-4">
-  <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-    
-    {/* TOP LINE */}
-    <div className="text-white">
-      TOP PLACEMENTS
-    </div>
+      
+      {/* 🔥 GRID UPDATED */}
+      <div className="grid grid-cols-1 md:grid-cols-[1.3fr_3.7fr] gap-10 items-center">
+        
+        {/* LEFT CONTENT (SMALLER) */}
+        <div className="px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+            <div className="text-white">TOP PLACEMENTS</div>
 
-    {/* GAP */}
-    <div className="h-3 md:h-4"></div>
+            <div className="h-3 md:h-4"></div>
 
-    {/* SECOND LINE */}
-    <div className="text-white/90 text-2xl md:text-3xl font-semibold">
-      From Campus
-    </div>
+            <div className="text-white/90 text-2xl md:text-3xl font-semibold">
+              From Campus
+            </div>
+            <div className="text-white/80 text-2xl md:text-3xl font-semibold">
+              to Corporate
+            </div>
+          </h2>
 
-    {/* THIRD LINE */}
-    <div className="text-white/80 text-2xl md:text-3xl font-semibold">
-      to Corporate
-    </div>
+          <p className="text-white/90 text-lg md:text-xl mt-4">
+            Our students secure top placements with strong industry exposure.
+          </p>
+        </div>
 
-  </h2>
-
-  <p className="text-white/90 text-lg md:text-xl mt-4">
-    Our students secure top placements with strong industry exposure.
-  </p>
-</div>
-
-
-        {/* RIGHT SLIDER */}
+        {/* RIGHT SLIDER (BIGGER) */}
         <div
-          className="md:col-span-3 overflow-hidden"
+          className="overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -150,36 +142,25 @@ const TopPlacements = () => {
             {[...students, ...students].map((student, i) => (
               <div
                 key={i}
-                className="
-                  mx-3 flex-shrink-0
-                  w-[50vw]
-                  sm:w-[45vw]
-                  md:w-[28vw]
-                  lg:w-[15vw]
-                "
+                className="mx-3 flex-shrink-0 w-[55vw] sm:w-[45vw] md:w-[26vw] lg:w-[16vw]"
               >
                 <div className="group overflow-hidden">
-                  {/* IMAGE */}
                   <div className="relative overflow-hidden h-64 sm:h-72 md:h-80 bg-white">
                     <img
                       src={student.image}
                       alt={student.name}
-                      className="
-                        w-full h-full object-cover md:object-cover 
-                        transition-transform duration-500
-                        group-hover:scale-110 object-top 
-                      "
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     />
 
-                    {/* FEEDBACK OVERLAY */}
                     <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center px-4 text-center">
-                      <p className="text-white text-sm">{student.feedback}</p>
+                      <p className="text-white text-sm">
+                        {student.feedback}
+                      </p>
                     </div>
                   </div>
 
-                  {/* NAME + COMPANY (FIXED BELOW IMAGE, LEFT) */}
                   <div className="pt-3 text-center">
-                    <h3 className="text-lg md:text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold text-white">
                       {student.name}
                     </h3>
                     <p className="text-lg md:text-xl text-white bg-[#011E5A]">
@@ -191,6 +172,7 @@ const TopPlacements = () => {
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );

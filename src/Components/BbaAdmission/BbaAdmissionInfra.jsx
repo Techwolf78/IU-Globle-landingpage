@@ -234,7 +234,7 @@ export default function CampusFacilities() {
   }, []);
 
   return (
-    <section
+     <section
       ref={sectionRef}
       className="relative min-h-[100vh] bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58] py-4 md:py-10"
       style={{ height: `${data.length * 100}vh` }}
@@ -252,10 +252,10 @@ export default function CampusFacilities() {
                   : "opacity-0 invisible absolute inset-x-0 pointer-events-none"
               }`}
             >
-              <div className="flex flex-col lg:flex-row items-center justify-between min-h-[70vh] gap-6 md:gap-8 lg:gap-12">
+              <div className="flex flex-col lg:flex-row items-center justify-between min-h-[70vh] gap-2 md:gap-2">
                 {/* Content Section */}
                 <div
-                  className={`w-full lg:w-5/12 order-1 ${
+                  className={`w-full lg:w-5/11 order-1 ${
                     item.contentSide === "right" ? "lg:order-2" : "lg:order-1"
                   }`}
                 >
@@ -266,7 +266,7 @@ export default function CampusFacilities() {
                     </span>
 
                     {/* Title */}
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white leading-tight">
                       {item.title}
                     </h2>
 
@@ -294,7 +294,7 @@ export default function CampusFacilities() {
 
                 {/* Image Grid Section */}
                 <div
-                  className={`w-full lg:w-7/12 order-2 ${
+                  className={`w-full lg:w-7/14 order-2 ${
                     item.contentSide === "right" ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
@@ -403,16 +403,8 @@ export default function CampusFacilities() {
 
         {/* Section Counter - Desktop Only */}
         <div className="hidden lg:block absolute top-4 xl:top-8 2xl:top-12 left-4 xl:left-8 2xl:left-12 z-30">
-          <div className="text-white/80">
-            <span className="text-xl xl:text-2xl 2xl:text-3xl font-bold text-[#FCC409]">
-              {activeIndex + 1}
-            </span>
-            <span className="text-white/60 mx-1 xl:mx-2 2xl:mx-3">/</span>
-            <span className="text-sm xl:text-base 2xl:text-lg">{data.length}</span>
-          </div>
-          <div className="text-white/60 text-xs xl:text-sm 2xl:text-base mt-0.5">
-            Campus Features
-          </div>
+          
+         
         </div>
 
         {/* Mobile & Tablet Section Counter */}
