@@ -14,34 +14,33 @@ import img12 from "../../assets/club3.jpg";
 import img13 from "../../assets/club5.jpg";
 import img14 from "../../assets/club4.jpg";
 import img15 from "../../assets/club1.jpg";
+
 const data = [
   {
     id: 1,
     title: "Campus Facilities and Infrastructure",
     description:
       "Indira University's modern campus features technology-enabled smart classrooms, a comprehensive library and digital resources, conference halls hosting guest lectures and industry seminars, a career development and placement cell, and sports facilities supporting all-round development in BBA International Business education with a global immersion programme, ensuring students secure their future with high placement. ",
-    images: [img11,img12,img13,img14,img15],
-    contentSide: "left", 
+    images: [img11, img12, img13, img14, img15],
+    contentSide: "left",
   },
   {
     id: 2,
     title: "Student Activities and Clubs",
     description:
       "Experience dynamic campus life through our Entrepreneurship and Innovation Cell connecting aspiring entrepreneurs with mentors, Marketing Club, Finance Club, Cultural Committee hosting annual festivals and talent shows, Technical and IT Club offering coding workshops; providing comprehensive co-curricular development alongside BBA International Business education with global immersion focus.",
-    images: [img6,img7,img8,img9,img10],
-    contentSide: "left", 
+    images: [img6, img7, img8, img9, img10],
+    contentSide: "left",
   },
   {
     id: 3,
     title: "Events and Annual Celebrations",
     description:
       "Indira University hosts vibrant annual events featuring industry leaders and corporate networking; multi-day cultural festival with celebrity appearances and inter-college participation; sports week promoting fitness and team spirit; fresher's induction farewell ceremony for graduating batches; regular industry interaction through guest lectures from MNCs; and formal convocation ceremony for degree conferment, creating memorable experiences supporting holistic development in business administration education with international exposure.",
-    
-    images: [img1,img2,img3,img4,img5],
-    contentSide: "left", 
+    images: [img1, img2, img3, img4, img5],
+    contentSide: "left",
   },
 ];
-
 
 export default function CampusFacilities() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -91,7 +90,7 @@ export default function CampusFacilities() {
         const scrollProgress = -rect.top / rect.height;
         const newIndex = Math.min(
           data.length - 1,
-          Math.max(0, Math.floor(scrollProgress * data.length)),
+          Math.max(0, Math.floor(scrollProgress * data.length))
         );
 
         if (newIndex !== activeIndex) {
@@ -234,25 +233,25 @@ export default function CampusFacilities() {
   }, []);
 
   return (
-     <section
+    <section
       ref={sectionRef}
       className="relative min-h-[100vh] bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58] py-4 md:py-10"
       style={{ height: `${data.length * 100}vh` }}
     >
       {/* Sticky container that stays in view */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-y-auto lg:overflow-hidden px-4 sm:px-6">
         {/* Content Container - Inside sticky div */}
-        <div className="relative container mx-auto z-20 w-full max-w-7xl">
+        <div className="relative container mx-auto z-20 w-full max-w-7xl py-4 lg:py-0">
           {data.map((item, index) => (
             <div
               key={item.id}
               className={`transition-all duration-700 ease-out ${
                 activeIndex === index
-                  ? "opacity-100 visible"
-                  : "opacity-0 invisible absolute inset-x-0 pointer-events-none"
+                  ? "opacity-100 visible block"
+                  : "opacity-0 hidden absolute inset-x-0 pointer-events-none"
               }`}
             >
-              <div className="flex flex-col lg:flex-row items-center justify-between min-h-[70vh] gap-2 md:gap-2">
+              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between min-h-[70vh] lg:min-h-[70vh] gap-4 md:gap-6 lg:gap-2">
                 {/* Content Section */}
                 <div
                   className={`w-full lg:w-5/11 order-1 ${
@@ -292,17 +291,19 @@ export default function CampusFacilities() {
                   </div>
                 </div>
 
-                {/* Image Grid Section */}
+                {/* Image Grid Section - FIXED FOR MOBILE */}
                 <div
-                  className={`w-full lg:w-7/14 order-2 ${
+                  className={`w-full lg:w-7/14 order-2 mt-4 lg:mt-0 ${
                     item.contentSide === "right" ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
-                  <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] w-full">
+                  <div className="relative w-full">
+                    {/* Responsive image grid - using aspect-ratio instead of fixed heights */}
+                    
                     {/* Top Row - 2 Images */}
-                    <div className="flex gap-2 sm:gap-3 md:gap-4 mb-2 sm:mb-3 md:mb-4">
+                    <div className="flex gap-1 sm:gap-2 md:gap-3 lg:gap-4 mb-1 sm:mb-2 md:mb-3 lg:mb-4">
                       {/* Image 1 */}
-                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                      <div className="relative w-1/2 aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
                         <img
                           src={item.images[0]}
                           alt={`${item.title} 1`}
@@ -312,7 +313,7 @@ export default function CampusFacilities() {
                       </div>
 
                       {/* Image 2 */}
-                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                      <div className="relative w-1/2 aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
                         <img
                           src={item.images[1]}
                           alt={`${item.title} 2`}
@@ -323,19 +324,19 @@ export default function CampusFacilities() {
                     </div>
 
                     {/* Middle Row - 1 Big Image */}
-                    <div className="relative h-40 sm:h-44 md:h-60 mb-2 sm:mb-3 md:mb-4 overflow-hidden rounded-lg md:rounded-xl lg:rounded-2xl shadow-lg sm:shadow-xl group">
+                    <div className="relative aspect-[16/9] lg:aspect-[16/7] mb-1 sm:mb-2 md:mb-3 lg:mb-4 overflow-hidden rounded-lg md:rounded-xl lg:rounded-2xl shadow-lg sm:shadow-xl group">
                       <img
                         src={item.images[2]}
                         alt={`${item.title} 3`}
-                        className="w-full h-full object-container transform transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                     </div>
 
                     {/* Bottom Row - 2 Images */}
-                    <div className="flex gap-2 sm:gap-3 md:gap-4">
+                    <div className="flex gap-1 sm:gap-2 md:gap-3 lg:gap-4">
                       {/* Image 4 */}
-                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                      <div className="relative w-1/2 aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
                         <img
                           src={item.images[3]}
                           alt={`${item.title} 4`}
@@ -345,7 +346,7 @@ export default function CampusFacilities() {
                       </div>
 
                       {/* Image 5 */}
-                      <div className="relative w-1/2 h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
+                      <div className="relative w-1/2 aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg group">
                         <img
                           src={item.images[4]}
                           alt={`${item.title} 5`}
@@ -355,7 +356,7 @@ export default function CampusFacilities() {
                       </div>
                     </div>
 
-                    {/* Decorative elements */}
+                    {/* Decorative elements - hidden on mobile */}
                     <div className="hidden md:block absolute -z-10 w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full bg-gradient-to-r from-[#FCC409]/10 to-[#FFD700]/5 blur-2xl lg:blur-3xl -left-4 md:-left-8 lg:-left-12 -top-4 md:-top-8 lg:-top-12" />
                     <div className="hidden md:block absolute -z-10 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full bg-gradient-to-r from-[#990000]/20 to-[#011E5A]/20 blur-xl lg:blur-2xl right-2 md:right-4 lg:right-8 bottom-2 md:bottom-4 lg:bottom-8" />
                   </div>
@@ -386,7 +387,7 @@ export default function CampusFacilities() {
         </div>
 
         {/* Mobile & Tablet Navigation Dots */}
-        <div className="lg:hidden absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex gap-2 sm:gap-3">
+        <div className="lg:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex gap-2 sm:gap-3">
           {data.map((_, index) => (
             <button
               key={index}
@@ -400,18 +401,7 @@ export default function CampusFacilities() {
             />
           ))}
         </div>
-
-        {/* Section Counter - Desktop Only */}
-        <div className="hidden lg:block absolute top-4 xl:top-8 2xl:top-12 left-4 xl:left-8 2xl:left-12 z-30">
-          
-         
-        </div>
-
-        {/* Mobile & Tablet Section Counter */}
-       
       </div>
-
-
     </section>
   );
 }
