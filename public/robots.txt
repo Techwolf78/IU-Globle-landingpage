@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.indirauniversity.edu.in/sitemap.xml
+Sitemap: https://bba-sob-global.indirauniversity.edu.in/sitemap.xml
