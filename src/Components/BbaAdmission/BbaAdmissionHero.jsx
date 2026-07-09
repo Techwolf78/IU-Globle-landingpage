@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import backgroundImage2 from "../../assets/hero.jpg";
+import backgroundImage2 from "../../assets/hero.avif";
 import NPFWidget from "../NPFWidget";
-import img from "../../assets/heroglob.jpg";
+import img from "../../assets/heroglob.avif";
 
 function CompHero() {
   const [currentText, setCurrentText] = useState("");
@@ -68,23 +68,23 @@ function CompHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 flex min-h-[90vh] flex-col md:flex-row items-center justify-center px-4 sm:px-8 md:px-16 gap-8 md:gap-12">
+      <div className="relative z-20 flex min-h-[90vh] md:min-h-[calc(100vh-162px)] flex-col md:flex-row items-center justify-center px-4 sm:px-8 md:px-16 py-6 md:py-0 gap-5 md:gap-12">
         {/* LEFT TEXT */}
         <div
-          className={`w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6 transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          className={`w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-6 transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
         >
           {/* Main Heading with typing animation */}
           <div className="overflow-hidden w-full">
-            <h1 className="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold py-4">
+            <h1 className="block text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold py-2 md:py-4">
               BBA in International Business with
-              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bold pt-4">
+              <span className="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold pt-2 md:pt-4 leading-tight">
                 Global Immersion Programme
               </span>
             </h1>
 
             {/* Global Image - Centered */}
             <div className=" flex justify-center md:justify-start">
-              <div className="w-full max-w-xs md:max-w-md">
+              <div className="w-full max-w-[13rem] sm:max-w-xs md:max-w-md">
                 <img 
                   src={img} 
                   alt="Global Immersion Programme" 
@@ -96,20 +96,19 @@ function CompHero() {
 
           {/* Description with staggered animation */}
           <div className="space-y-2">
-            <p className="text-lg sm:text-xl md:text-md leading-relaxed transform transition-all duration-700 delay-300 text-normal">
-           <span className="font-bold text-amber-300 text-2xl">Experiential Learning at Korea University  - Ranked #12 in QS Asia Rankings</span> <br />
+            <p className="text-sm sm:text-base md:text-md leading-relaxed transform transition-all duration-700 delay-300 text-normal">
+           <span className="font-bold text-amber-300 text-lg sm:text-2xl">Experiential Learning at Korea University  - Ranked #12 in QS Asia Rankings</span> <br />
  
 Experience international business education with our exclusive Global Immersion Programme
             </p>
           </div>
 
           {/* Admissions Banner with pulse animation */}
-          <div className="py-4 transform transition-all duration-700 delay-500">
+          <div className="py-1 md:py-4 transform transition-all duration-700 delay-500">
             <div className="relative inline-block group">
-              <p className="text-lg sm:text-xl md:text-2xl bg-[#D3FFFD] text-black font-bold py-3 px-6 rounded-xl inline-block transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl shadow-lg animate-pulse-slow">
+              <p className="text-xs sm:text-base md:text-2xl border border-[#D3FFFD]/50 bg-[#D3FFFD]/15 text-white font-semibold py-2 px-4 rounded-xl inline-block shadow-sm">
                 Admissions Open for 2026-27
               </p>
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#209EA3] to-[#FCC409] rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300 -z-10"></div>
             </div>
           </div>
 
@@ -122,7 +121,7 @@ Experience international business education with our exclusive Global Immersion 
         >
           <div className="relative w-full max-w-md group">
             <div className="absolute -inset-1 "></div>
-            <div className="relative p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-700 transform transition-all duration-300 group-hover:scale-[1.02]">
+            <div className="relative max-h-[58vh] md:max-h-none md:h-[520px] overflow-y-auto md:overflow-hidden overscroll-contain p-3 sm:p-4 md:p-6 rounded-2xl shadow-2xl border border-white/20 md:border-gray-700 transform transition-all duration-300 md:group-hover:scale-[1.01]">
               <NPFWidget />
             </div>
           </div>

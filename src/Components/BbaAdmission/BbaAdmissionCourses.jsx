@@ -77,8 +77,8 @@ const CareerSlider = () => {
   };
 
   return (
-    <div className="py-14 bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58]">
-      <h2 className="text-2xl md:text-4xl font-bold text-center text-[white] mb-8">
+    <div className="py-8 md:py-14 bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58]">
+      <h2 className="text-2xl md:text-4xl font-bold text-center text-[white] mb-4 md:mb-8 px-4 leading-tight">
         Career Opportunities After Global Immersion
       </h2>
 
@@ -86,7 +86,7 @@ const CareerSlider = () => {
         {/* Left Arrow */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-3"
+          className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-3"
         >
           ◀
         </button>
@@ -94,12 +94,12 @@ const CareerSlider = () => {
         {/* Slider */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar px-4 py-6 "
+          className="flex gap-3 md:gap-6 overflow-x-auto scroll-smooth no-scrollbar px-1 sm:px-4 py-4 md:py-6 pb-2"
         >
           {cards.map((card, i) => (
             <div
               key={i}
-              className="min-w-[300px] bg-white rounded-2xl border border-[#2899A4]/40 shadow-lg p-6"
+              className="min-w-[78vw] sm:min-w-[300px] bg-white rounded-2xl border border-[#2899A4]/40 shadow-lg p-4 md:p-6"
             >
               <h3 className="text-[#011E5A] font-bold text-lg mb-3">
                 {card.title}
@@ -116,7 +116,7 @@ const CareerSlider = () => {
         {/* Right Arrow */}
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-3"
+          className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full p-3"
         >
           ▶
         </button>

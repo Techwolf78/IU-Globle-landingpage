@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import img1 from "../../assets/New_Students/1.png";
-import img2 from "../../assets/New_Students/2.png";
-import img3 from "../../assets/New_Students/3.png";
-import img4 from "../../assets/New_Students/4.png";
-import img5 from "../../assets/New_Students/5.png";
-import img6 from "../../assets/New_Students/6.png";
-import img7 from "../../assets/New_Students/7.png";
-import img8 from "../../assets/New_Students/8.png";
-import img9 from "../../assets/New_Students/9.png";
-import img10 from "../../assets/New_Students/10.png";
+import img1 from "../../assets/New_Students/1.avif";
+import img2 from "../../assets/New_Students/2.avif";
+import img3 from "../../assets/New_Students/3.avif";
+import img4 from "../../assets/New_Students/4.avif";
+import img5 from "../../assets/New_Students/5.avif";
+import img6 from "../../assets/New_Students/6.avif";
+import img7 from "../../assets/New_Students/7.avif";
+import img8 from "../../assets/New_Students/8.avif";
+import img9 from "../../assets/New_Students/9.avif";
+import img10 from "../../assets/New_Students/10.avif";
 
 const students = [
   {

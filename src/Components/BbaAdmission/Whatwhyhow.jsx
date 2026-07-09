@@ -2,30 +2,30 @@ import React from "react";
 
 const GlobalImmersionProgram = () => {
   return (
-    <div className="min-h-screen bg-white p-6 md:p-12">
+    <div className="bg-white p-4 md:p-12">
       <div className="max-w-6xl mx-auto">
         {/* Main Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-6">
+        <div className="text-center mb-6 md:mb-12">
+          <h1 className="text-2xl md:text-5xl font-bold text-gray-900 mb-2 md:mb-6">
             What, Why & How ?
           </h1>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900  md:mb-6">
+          <h1 className="text-lg md:text-3xl font-bold text-gray-900 md:mb-6 leading-tight">
             UNDERSTANDING GLOBAL IMMERSION PROGRAMMES
           </h1>
-          <div className="mt-12 text-center">
+          <div className="mt-4 md:mt-12 text-center">
             {/* <div className="w-32 h-1 bg-gradient-to-r from-[#7A0C1E] to-[#1E40AF] mx-auto mb-4 rounded-full"></div> */}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12">
           {/* WHAT Card */}
-          <div className="bg-gradient-to-br from-[#fcd3da] to-white border-l-8 border-[#990000] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="mb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
+          <div className="bg-gradient-to-br from-[#fcd3da] to-white border-l-4 md:border-l-8 border-[#990000] rounded-r-xl p-4 md:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="mb-4 md:mb-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-full mb-3 md:mb-4">
                 {/* Globe Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#990000]"
+                  className="h-6 w-6 md:h-8 md:w-8 text-[#990000]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -38,12 +38,12 @@ const GlobalImmersionProgram = () => {
                   />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                 What is a Global Immersion Programme?
-              </h2> <br /> 
-              <div className="w-20 h-1 bg-[#990000] mb-6"></div>
+              </h2>
+              <div className="w-16 md:w-20 h-1 bg-[#990000] mb-4 md:mb-6"></div>
             </div>
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
               <span className=" ">
                 A Global Immersion Programme in BBA education combines
                 international business coursework with hands-on overseas
@@ -56,13 +56,13 @@ const GlobalImmersionProgram = () => {
           </div>
 
           {/* WHY Card */}
-          <div className="bg-gradient-to-br from-[#a6bef5] to-white border-l-8 border-[#1657f2] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="mb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
+          <div className="bg-gradient-to-br from-[#a6bef5] to-white border-l-4 md:border-l-8 border-[#1657f2] rounded-r-xl p-4 md:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="mb-4 md:mb-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-full mb-3 md:mb-4">
                 {/* Airplane Icon - Simple */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#092fce]"
+                  className="h-6 w-6 md:h-8 md:w-8 text-[#092fce]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -75,12 +75,12 @@ const GlobalImmersionProgram = () => {
                   />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                 Why are Global Immersion Programmes important?
               </h2>
-              <div className="w-20 h-1 bg-[#092fce] mb-6"></div>
+              <div className="w-16 md:w-20 h-1 bg-[#092fce] mb-4 md:mb-6"></div>
             </div>
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
               <span className="">
                 Global immersion programmes are essential for developing
                 cross-cultural competencies, international business skills, and
@@ -93,13 +93,13 @@ const GlobalImmersionProgram = () => {
           </div>
 
           {/* HOW Card */}
-          <div className="bg-gradient-to-br from-[#fcd3da] to-white border-l-8 border-[#990000] rounded-r-xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="mb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
+          <div className="bg-gradient-to-br from-[#fcd3da] to-white border-l-4 md:border-l-8 border-[#990000] rounded-r-xl p-4 md:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="mb-4 md:mb-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-full mb-3 md:mb-4">
                 {/* Book Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-[#990000]"
+                  className="h-6 w-6 md:h-8 md:w-8 text-[#990000]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -112,12 +112,12 @@ const GlobalImmersionProgram = () => {
                   />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                 How our Global Immersion Programmes help you?
               </h2>
-              <div className="w-20 h-1 bg-[#990000] mb-6"></div>
+              <div className="w-16 md:w-20 h-1 bg-[#990000] mb-4 md:mb-6"></div>
             </div>
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
               <span className="">
                 Our BBA International Business Global Immersion programme
                 provides Korean language training, Korea University

@@ -33,6 +33,7 @@ const ThankYou = () => {
       <Helmet>
         <title>Thank You - IU Pune</title>
         <meta name="description" content="Thank you for your interest in IU Pune. Your lead has been successfully captured." />
+        <meta name="robots" content="noindex, nofollow" />
         {/* Google Ads Conversion Tracking */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16977491177"></script>
         <script>

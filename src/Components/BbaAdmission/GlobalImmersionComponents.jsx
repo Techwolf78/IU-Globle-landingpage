@@ -27,23 +27,23 @@ const CompRecruiter = () => {
   ];
 
   return (
-    <div className=" bg-white overflow-hidden">
+    <div className="bg-white overflow-hidden">
       {/* Heading */}
-      <div className="text-center m-6 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#011E5A]">
+      <div className="text-center my-6 md:m-6 px-4">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#011E5A] leading-tight">
           Exclusive Global Immersion Programme Components
         </h2>
       </div>
 
       {/* Top Cards */}
       <div className="max-w-6xl mx-auto px-4 mb-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3 md:gap-6">
           {topCards.map((card, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-[#011E5A]/5 to-[#2899A4]/5 rounded-2xl border border-[#2899A4]/30 p-4 shadow"
+              className="bg-gradient-to-r from-[#011E5A]/5 to-[#2899A4]/5 rounded-xl md:rounded-2xl border border-[#2899A4]/30 p-3 md:p-4 shadow"
             >
-              <h3 className="text-[#011E5A] font-bold text-xl text-center">
+              <h3 className="text-[#011E5A] font-bold text-sm md:text-xl text-center leading-tight">
                 {card.title}
               </h3>
             </div>
@@ -53,19 +53,19 @@ const CompRecruiter = () => {
 
       {/* BIG + SMALL CARDS */}
       <div className="max-w-7xl mx-auto px-4 mb-12">
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-4 md:gap-8">
           
           {/* BIG CARD */}
-          <div className="lg:col-span-2 bg-gradient-to-r from-[#011E5A]/5 to-[#2899A4]/5 rounded-2xl border-2 border-[#2899A4]/30 p-8 shadow-lg">
-            <h3 className="text-[#011E5A] font-bold text-2xl mb-6">
+          <div className="lg:col-span-2 bg-gradient-to-r from-[#011E5A]/5 to-[#2899A4]/5 rounded-2xl border-2 border-[#2899A4]/30 p-4 md:p-8 shadow-lg">
+            <h3 className="text-[#011E5A] font-bold text-xl md:text-2xl mb-4 md:mb-6">
               {specialCard.title}
             </h3>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               {specialCard.points.map((point, i) => (
                 <div key={i} className="flex items-start">
                   <span className="text-[#2899A4] mr-3">✔</span>
-                  <span className="text-gray-700 text-sm md:text-base">
+                  <span className="text-gray-700 text-xs md:text-base leading-snug">
                     {point}
                   </span>
                 </div>
@@ -74,7 +74,7 @@ const CompRecruiter = () => {
           </div>
 
           {/* SMALL CARD */}
-          <div className="bg-gradient-to-r from-[#011E5A]/5 to-[#2899A4]/5 rounded-2xl border-2 border-[#2899A4]/30 p-6 shadow-lg">
+          <div className="bg-gradient-to-r from-[#011E5A]/5 to-[#2899A4]/5 rounded-2xl border-2 border-[#2899A4]/30 p-4 md:p-6 shadow-lg">
             <h3 className="text-[#011E5A] font-bold text-xl mb-4">
               {feeCard.title}
             </h3>

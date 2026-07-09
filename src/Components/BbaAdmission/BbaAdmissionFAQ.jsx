@@ -46,11 +46,11 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
     >
       <button
         onClick={onClick}
-        className="w-full flex items-start justify-between px-5 py-4 text-left focus:outline-none flex-shrink-0"
+        className="w-full flex items-start justify-between px-3 py-3 md:px-5 md:py-4 text-left focus:outline-none flex-shrink-0"
         aria-expanded={isOpen}
       >
         <span
-          className={`text-base font-semibold pr-8 transition-colors duration-300 flex-1 ${
+          className={`text-xs sm:text-sm md:text-base font-semibold pr-2 md:pr-8 transition-colors duration-300 flex-1 ${
             isOpen
               ? "text-[#990000]"
               : "text-gray-800 group-hover:text-[#990000]"
@@ -61,7 +61,7 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
 
         {/* Icon Container */}
         <span
-          className={`flex-shrink-0 ml-2 w-7 h-7 flex items-center justify-center rounded-full transition-all duration-300 ${
+          className={`flex-shrink-0 ml-1 md:ml-2 w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-xl md:rounded-full transition-all duration-300 ${
             isOpen
               ? "bg-[#990000] text-white rotate-180"
               : "bg-gray-50 text-[#990000] group-hover:bg-[#990000]/10"
@@ -78,7 +78,7 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-dashed border-gray-100 pt-3">
+          <div className="px-3 pb-3 md:px-5 md:pb-5 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-dashed border-gray-100 pt-3">
             {item.answer}
           </div>
         </div>
@@ -97,7 +97,7 @@ function BbaAdmissionFAQ() {
   };
 
   return (
-    <section className="relative px-4 sm:px-6 md:px-12 py-16 bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58] overflow-hidden">
+    <section className="relative px-4 sm:px-6 md:px-12 py-10 md:py-16 bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58] overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-40">
         <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] rounded-full bg-blue-100 blur-3xl mix-blend-multiply filter" />
@@ -106,16 +106,16 @@ function BbaAdmissionFAQ() {
 
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+        <div className="text-center mb-7 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-3">
             Frequently Asked Questions
           </h2>
-          <p className="text-white max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-white max-w-3xl mx-auto">
 Get answers to the most common questions about BBA course of Indira University, Maharashtra.           </p>
         </div>
 
         {/* 3 Column Grid for FAQ Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
           {FAQ_DATA.map((item, index) => (
             <AccordionItem
               key={index}

@@ -72,17 +72,17 @@ const BBAAdmissionProcess = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 md:px-10 overflow-x-hidden font-sans">
+    <section className="bg-white py-10 sm:py-20 px-4 sm:px-6 md:px-10 overflow-x-hidden font-sans">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#011E5A] mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#011E5A] mb-3 md:mb-4 leading-tight">
               BBA ADMISSION <span className="text-[#990000]"> OPEN FOR 2026-2027</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
@@ -92,7 +92,7 @@ const BBAAdmissionProcess = () => {
         </div>
 
         {/* STEPS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 md:gap-x-6 relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-x-6 md:gap-y-12 relative">
           {steps.map((step, index) => {
             const isActive = index < visibleSteps;
 
@@ -102,7 +102,7 @@ const BBAAdmissionProcess = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isActive ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}
-                className="relative flex flex-col items-center text-center group px-2"
+                className="relative flex flex-col items-center text-center group px-1 md:px-2"
               >
                 {/* CONNECTOR (DESKTOP ONLY) */}
                 {index !== steps.length - 1 && (
@@ -122,8 +122,8 @@ const BBAAdmissionProcess = () => {
 
                 {/* ICON */}
                 <div
-                  className={`relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full 
-                  flex items-center justify-center text-2xl sm:text-3xl
+                  className={`relative z-10 w-14 h-14 sm:w-20 sm:h-20 rounded-2xl sm:rounded-full 
+                  flex items-center justify-center text-xl sm:text-3xl
                   shadow-lg border-4 border-white transition-transform duration-300 
                   group-hover:scale-110 ${step.textColor}`}
                   style={{ backgroundColor: step.bgColor }}
@@ -132,11 +132,11 @@ const BBAAdmissionProcess = () => {
                 </div>
 
                 {/* TEXT */}
-                <div className="mt-5 sm:mt-6">
-                  <h3 className="text-base sm:text-lg font-bold text-[#011E5A] mb-2 leading-tight">
+                <div className="mt-3 sm:mt-6">
+                  <h3 className="text-sm sm:text-lg font-bold text-[#011E5A] mb-2 leading-tight">
                     Step {step.id}: <br /> {step.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>

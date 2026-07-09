@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.avif";
 
 const certifications = [
   { id: 1, title: "Executive Programme on GST" },

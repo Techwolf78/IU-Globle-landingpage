@@ -1,13 +1,13 @@
 import React from "react";
-import aboutImage from "../../assets/about.jpg";
-import indiraLogo from "../../assets/IU.png";
-import koreaLogo from "../../assets/Korea.png";
+import aboutImage from "../../assets/about.avif";
+import indiraLogo from "../../assets/IU.avif";
+import koreaLogo from "../../assets/Korea.avif";
 
 const UniversityComparison = () => {
   return (
     <>
-      <div className="mb-8">
-        <h1 className="text-4xl md:text-4xl font-bold text-center text-black mb-2 md:mb-8">
+      <div className="mb-5 md:mb-8">
+        <h1 className="text-2xl md:text-4xl font-bold text-center text-black mb-2 md:mb-8">
           ABOUT US
         </h1>
       </div>
@@ -100,25 +100,25 @@ const UniversityComparison = () => {
       {/* Mobile - Gradient Background */}
       <div className="block md:hidden">
         <div className="w-full mx-auto">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             {/* Left - Indira University */}
             <div className="relative  overflow-hidden shadow-lg"
               style={{
                 background: "linear-gradient(135deg, #990000 0%, #011E5A 50%, #1e40af 100%)"
               }}
             >
-              <div className="p-6 relative">
+              <div className="p-4 relative">
                 {/* LOGO TOP RIGHT */}
                 <div className="absolute top-6 right-6">
-                  <img src={indiraLogo} alt="Indira University Logo" className="h-12 object-contain" />
+                  <img src={indiraLogo} alt="Indira University Logo" className="h-9 object-contain" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h2 className="text-xl md:text-3xl font-bold text-white mb-2 pr-20">
                   INDIRA UNIVERSITY
                 </h2>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                <h3 className="text-base md:text-2xl font-semibold text-white mb-3 pr-12">
                   Leading BBA College in India
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <p className="text-white text-sm md:text-base leading-relaxed">
                     Indira University ranks amongst India's most progressive
                     institutions offering Bachelor of Business Administration
@@ -149,18 +149,18 @@ const UniversityComparison = () => {
                 background: "linear-gradient(135deg, #990000 0%, #011E5A 50%, #1e40af 100%)"
               }}
             >
-              <div className="p-6 relative">
+              <div className="p-4 relative">
                 {/* LOGO TOP RIGHT */}
                 <div className="absolute top-6 right-6">
-                  <img src={koreaLogo} alt="Korea University Logo" className="h-23 object-contain" />
+                  <img src={koreaLogo} alt="Korea University Logo" className="h-14 object-contain" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h2 className="text-xl md:text-3xl font-bold text-white mb-2 pr-24">
                   KOREA UNIVERSITY
                 </h2>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                <h3 className="text-base md:text-2xl font-semibold text-white mb-3 pr-12">
                   International Partner for Global Education
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <p className="text-white text-sm md:text-base leading-relaxed">
                     Korea University, established in 1905, ranks amongst Asia's
                     most prestigious educational institutions and South Korea's

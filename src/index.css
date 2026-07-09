@@ -27,3 +27,13 @@
   font-weight: 300;
   font-style: normal;
 }
+
+.no-scrollbar,
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

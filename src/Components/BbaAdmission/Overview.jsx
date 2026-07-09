@@ -1,6 +1,6 @@
 import React from "react";
 import { BookOpen } from "lucide-react";
-import ProgramImg from "../../assets/Overview.jpg"; // <-- apni image ka path
+import ProgramImg from "../../assets/Overview.avif"; // <-- apni image ka path
 
 const BBAProgramOverview = () => {
   return (

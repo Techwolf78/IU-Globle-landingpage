@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Image1 from "../../assets/plain.png";
+import Image1 from "../../assets/plain.avif";
 
 // AOS
 import AOS from "aos";

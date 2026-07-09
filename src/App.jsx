@@ -1,13 +1,13 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Pages/Navbar";
 import Footer from "./Pages/Footer";
-import Brochure from "./Pages/Brochure";
-import BbaAdmission from "./Pages/BbaAdmission";
 import ApplyButtonRight from "./Components/ApplyButtonRight";
-import ThankYou from "./Pages/Thankyou";
-// Importing the 404 Page
-import NotFoundPage from "./Components/NotFoundPage"; // Make sure this is the correct path to your 404 page
+import LoadingSpinner from "./Components/LoadingSpinner";
+
+const BbaAdmission = lazy(() => import("./Pages/BbaAdmission"));
+const ThankYou = lazy(() => import("./Pages/Thankyou"));
+const NotFoundPage = lazy(() => import("./Components/NotFoundPage"));
 
 function App() {
   return (
@@ -16,13 +16,14 @@ function App() {
         <ApplyButtonRight />
         <main>
           <Navbar />
-          {/* <Brochure /> */}
-          <Routes>
-            {/* Define routes for all the pages */}
-            <Route path="/" element={<BbaAdmission />} />
-            <Route path="*" element={<NotFoundPage />} />
-            <Route path="/thankyou" element={<ThankYou />} />
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              {/* Define routes for all the pages */}
+              <Route path="/" element={<BbaAdmission />} />
+              <Route path="*" element={<NotFoundPage />} />
+              <Route path="/thankyou" element={<ThankYou />} />
+            </Routes>
+          </Suspense>
           <Footer />
         </main>
       </div>

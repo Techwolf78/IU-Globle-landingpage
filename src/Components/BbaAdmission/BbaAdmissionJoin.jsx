@@ -26,7 +26,7 @@ function MarketingManagementJoin() {
   };
 
   return (
-    <div className="relative overflow-hidden mt-6 md:mt-10">
+    <div className="relative overflow-hidden mt-0">
       {/* Background image */}
       <div
         className="bg-cover bg-center absolute inset-0"
@@ -37,16 +37,16 @@ function MarketingManagementJoin() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#990000] via-[#011E5A] to-[#051D58] opacity-70 z-10" />
 
       {/* Text content */}
-      <div className="relative z-20 px-8 md:px-16 py-10">
+      <div className="relative z-20 px-4 md:px-16 py-8 md:py-10">
         <div className="text-center">
-          <h1 className="text-xl md:text-3xl font-bold text-white mb-4">
+          <h1 className="text-lg md:text-3xl font-bold text-white mb-4 leading-tight">
             Get everything you need to make an informed decision – course details, placements, and your college life at Indira University.
           </h1>
 
           {/* Download Brochure Button */}
           <button
             onClick={handleDownloadBrochure}
-            className="inline-flex items-center gap-2 bg-white text-[#003C84] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-300 transform"
+            className="inline-flex items-center gap-2 bg-white text-[#003C84] font-semibold px-5 md:px-6 py-3 rounded-2xl shadow-lg hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-300 transform"
           >
             <FiDownload size={20} />
             Download Brochure

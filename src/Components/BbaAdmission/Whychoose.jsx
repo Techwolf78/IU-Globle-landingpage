@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Image1 from "../../assets/Building.jpg";
+import Image1 from "../../assets/Building.avif";
 
 // AOS
 import AOS from "aos";
@@ -61,24 +61,24 @@ function BbaAdmissionOverview() {
      
 
       {/* ================= WHY CHOOSE US ================= */}
-      <div className="px-6 md:px-16 py-10 bg-white" data-aos="fade-up">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+      <div className="px-4 md:px-16 py-8 md:py-10 bg-white" data-aos="fade-up">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-8">
          WHY CHOOSE US? 
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 max-w-7xl mx-auto">
           {cardData.map((item, index) => (
             <div
               key={index}
-              className="bg-[#011E5A] p-5 rounded-xl relative
+              className="bg-[#011E5A] p-3 md:p-5 rounded-xl relative
                          transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <item.icon
-                size={42}
-                className="text-white mb-4 icon"
+                size={32}
+                className="text-white mb-3 md:mb-4 icon md:w-[42px] md:h-[42px]"
               />
 
-              <p className="text-white font-semibold text-base md:text-lg">
+              <p className="text-white font-semibold text-xs sm:text-sm md:text-lg leading-snug">
                 {item.title}
               </p>
 

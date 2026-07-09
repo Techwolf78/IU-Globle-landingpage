@@ -1,0 +1,9 @@
+{
+  "name": "Indira University BBA Admissions",
+  "short_name": "IU BBA",
+  "description": "BBA admissions landing page for Indira University Pune.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#011E5A"
+}
