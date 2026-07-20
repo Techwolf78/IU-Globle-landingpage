@@ -27,7 +27,7 @@ const NPFWidget = () => {
     <div
       className="npf_wgts w-full"
       data-height={widgetHeight}
-      data-w="fa696c7c8f761369fe613b07551b1bf3"
+      data-w="485adad5d85a233b731dd5cc763e58ba"
     ></div>
   );
 };
