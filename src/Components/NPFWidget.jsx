@@ -5,7 +5,7 @@ const NPFWidget = () => {
 
   useEffect(() => {
     const updateWidgetHeight = () => {
-      setWidgetHeight(window.innerWidth >= 768 ? "560px" : "510px");
+      setWidgetHeight(window.innerWidth >= 768 ? "550px" : "600px");
     };
 
     updateWidgetHeight();

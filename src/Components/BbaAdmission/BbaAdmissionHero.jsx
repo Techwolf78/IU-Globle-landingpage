@@ -121,7 +121,7 @@ Experience international business education with our exclusive Global Immersion 
         >
           <div className="relative w-full max-w-md group">
             <div className="absolute -inset-1 "></div>
-            <div className="relative max-h-[58vh] md:max-h-none md:h-[520px] overflow-y-auto md:overflow-hidden overscroll-contain p-3 sm:p-4 md:p-6 rounded-2xl shadow-2xl border border-white/20 md:border-gray-700 transform transition-all duration-300 md:group-hover:scale-[1.01]">
+            <div className="relative p-3 sm:p-4 md:p-6 rounded-2xl shadow-2xl border border-white/20 md:border-gray-700 transform transition-all duration-300 md:group-hover:scale-[1.01]">
               <NPFWidget />
             </div>
           </div>

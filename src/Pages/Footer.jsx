@@ -148,7 +148,7 @@ function Footer() {
                   Our Schools
                 </a>
                 <a
-                  href="https://www.indirauniversity.edu.in/admissions#"
+                  href="https://indirauniversity.edu.in/privacypolicy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-gray-600 hover:text-gray-400 text-sm md:text-lg"
@@ -156,18 +156,17 @@ function Footer() {
                   Privacy Policy
                 </a>
                 <a
-                  href="https://www.indirauniversity.edu.in/admissions#"
+                  href="https://indirauniversity.edu.in/terms-conditions-indira-university"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-gray-600 hover:text-gray-400 text-sm md:text-lg"
                 >
-                  Terms of Services
+                  Terms & Conditions
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Schools Column */}
           {/* Schools Column */}
           <div className="space-y-4 md:space-y-8">
             <h3 className="text-xl md:text-2xl font-bold text-[#023b5e]">Schools</h3>

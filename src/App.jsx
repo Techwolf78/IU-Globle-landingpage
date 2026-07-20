@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Pages/Navbar";
 import Footer from "./Pages/Footer";
 import ApplyButtonRight from "./Components/ApplyButtonRight";
+import ScrollToTop from "./Components/ScrollToTop";
 import LoadingSpinner from "./Components/LoadingSpinner";
 
 const BbaAdmission = lazy(() => import("./Pages/BbaAdmission"));
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <div style={{ fontFamily: "Helvetica Neue Black, sans-serif" }}>
         <ApplyButtonRight />
+        <ScrollToTop />
         <main>
           <Navbar />
           <Suspense fallback={<LoadingSpinner />}>
