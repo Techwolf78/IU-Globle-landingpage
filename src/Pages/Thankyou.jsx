@@ -20,6 +20,22 @@ const ThankYou = () => {
     return () => clearInterval(timer);
   }, [navigate]);
  
+  useEffect(() => {
+    // Ensure gtag is initialized and push the conversion event
+    window.dataLayer = window.dataLayer || [];
+    const gtag = window.gtag || function() {
+      window.dataLayer.push(arguments);
+    };
+    if (!window.gtag) {
+      window.gtag = gtag;
+    }
+    
+    // Fire Google Ads conversion tracking event
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-16977491177/Y_6BCM_mk7YaEOnpv58_'
+    });
+  }, []);
+ 
   const handleGoBack = () => {
     window.history.back();
   };
@@ -34,7 +50,7 @@ const ThankYou = () => {
         <title>Thank You - IU Pune</title>
         <meta name="description" content="Thank you for your interest in IU Pune. Your lead has been successfully captured." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://bba-sob.indirauniversity.edu.in/thankyou" />
+        <link rel="canonical" href="https://indirauniversity.edu.in/thank-you" />
         {/* Google Ads Conversion Tracking */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16977491177"></script>
         <script>
