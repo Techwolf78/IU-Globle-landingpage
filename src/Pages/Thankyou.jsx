@@ -21,19 +21,18 @@ const ThankYou = () => {
   }, [navigate]);
  
   useEffect(() => {
-    // Ensure gtag is initialized and push the conversion event
-    window.dataLayer = window.dataLayer || [];
-    const gtag = window.gtag || function() {
-      window.dataLayer.push(arguments);
-    };
-    if (!window.gtag) {
-      window.gtag = gtag;
-    }
-    
     // Fire Google Ads conversion tracking event
-    window.gtag('event', 'conversion', {
-      'send_to': 'AW-16977491177/Y_6BCM_mk7YaEOnpv58_'
-    });
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-16977491177/Y_6BCM_mk7YaEOnpv58_'
+      });
+    } else {
+      window.dataLayer.push('event', 'conversion', {
+        'send_to': 'AW-16977491177/Y_6BCM_mk7YaEOnpv58_'
+      });
+    }
+    console.log('[Google Ads] Conversion event triggered for AW-16977491177/Y_6BCM_mk7YaEOnpv58_');
   }, []);
  
   const handleGoBack = () => {
@@ -51,17 +50,6 @@ const ThankYou = () => {
         <meta name="description" content="Thank you for your interest in IU Pune. Your lead has been successfully captured." />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://bba-sob.indirauniversity.edu.in/thankyou" />
-        {/* Google Ads Conversion Tracking */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16977491177"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16977491177');
-            gtag('event', 'conversion', {'send_to': 'AW-16977491177/Y_6BCM_mk7YaEOnpv58_'});
-          `}
-        </script>
       </Helmet>
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 text-center">
